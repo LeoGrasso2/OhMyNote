@@ -1,0 +1,49 @@
+.cartelInfo{
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: fit-content;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+.botonAdd{
+    border: 2px solid black;
+    border-radius: 100%;
+    margin: 0px 0px 0px 10px;
+    user-select:none;
+    cursor:pointer;
+}
+
+#desplegarNotas{
+    background-color:black;
+    color: white;
+    margin-top: 10px;
+}
+
+.tablonTotal{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+}
+.tituloNota{
+    padding-bottom: 5px;
+}
+.nota{
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    max-width: fit-content;
+    display: flex;
+    background-color: yellow;
+    flex-direction: column;
+}
+#notasTotales{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
