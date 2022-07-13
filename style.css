@@ -1,25 +1,27 @@
 .cartelInfo{
+    color: white;
     display: flex;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif;
     max-width: fit-content;
     padding: 10px;
-    border: 2px solid black;
+    box-shadow: 2px 5px 5px rgba(117, 117, 117, 0.37);
     border-radius: 10px;
-    background-color: yellow;
+    background-color: rgb(36, 36, 36);
+    text-shadow: 2px 1px 1px rgba(109, 109, 109, 0.356);
 }
 
 .botonAdd{
+    box-shadow: 2px 5px 5px rgba(117, 117, 117, 0.37);
+    max-width: fit-content;
     border: 2px solid black;
-    border-radius: 100%;
-    margin: 0px 0px 0px 10px;
+    font-size: 2em;
+    border-radius: 50px;
     user-select:none;
     cursor:pointer;
 }
 
-#desplegarNotas{
-    background-color:black;
-    color: white;
-    margin-top: 10px;
+.botonDelete{
+    background-color: red;
 }
 
 .tablonTotal{
@@ -29,19 +31,33 @@
 
 }
 .tituloNota{
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 5px;
 }
+
+.botonDelete{
+    color: white;
+    user-select: none;
+    cursor:pointer;
+}
+
 .nota{
-    font-family: 'Courier New', Courier, monospace;
-    border: 2px solid black;
+
+    box-shadow: 2px 5px 5px rgba(117, 117, 117, 0.37);
+    font-family: sans-serif;
     border-radius: 10px;
     margin-right: 10px;
     padding: 10px;
-    max-width: fit-content;
+    max-width: 300px;
     display: flex;
-    background-color: yellow;
+    min-width: 150px;
+    min-height: 150px;
+    background-color: rgb(238, 255, 0);
     flex-direction: column;
+    overflow-wrap: break-word;
 }
+
 #notasTotales{
     margin-top: 10px;
     display: flex;

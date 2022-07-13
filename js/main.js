@@ -1,49 +1,41 @@
 let listaNotas=[];
 let seguir;
+let numNota=0;
+let i=0;
 
-
-// let nombreUser=prompt('Bienvenido a Mis Notas®.\nIngrese su nombre:');
-// do{
-//     let opcion=prompt(`Mis Notas®\n----------\n${nombreUser}, ¿que acción desea realizar?\n1. Añadir nota.\n2. Ver notas.\n3. Eliminar`);
-//     switch(opcion){
-//     case '1':
-//     
-//     addNota(notaTitle,notaTexto);
-//     break;
-//     case '2':
-//     for(let i=0; i<listaNotas.length;i++){
-//         alert(`Mis Notas® - Nota n°${listaNotas[i].posActual}.\n\nTitulo: ${listaNotas[i].notaTitle}\nTexto: ${listaNotas[i].notaTexto}`);
-//     }
-    
-//     break;
-//     case '3':
-//     let del=(Number.parseInt(prompt(`Mis Notas® - Eliminar nota.\nHay ${listaNotas.length} notas, ¿cual desea eliminar?`)));
-//     deleteNota(del);
-    
-// }
-//     seguir=prompt('¿Quiere realizar otra acción?\n1. Si.\n 2.No.');
-// }while(seguir=='1');
-
-// alert('Gracias por utilizar mi programa!.\n-Leonardo Grasso.');
 
 function addNota(){
-    let notaTitle=prompt(`Mis Notas® - Nueva nota.\n----------\nTitulo:`);
-    let notaTexto=prompt(`Mis Notas® - Nueva nota.\n----------\nTexto:`);
+    let notaTitle=prompt(`Nueva nota.\n----------\nTitulo:`);
+    let notaTexto=prompt(`Nueva nota.\n----------\nTexto:`);
+    this.i=i;
+    
 
     listaNotas.push({
         notaTitle: notaTitle,
         notaTexto: notaTexto,
-        posActual: (listaNotas.length) + 1,
+        numNota: i,
     })
-
-    contenedor = document.createElement('div');
-    contenedor.setAttribute("class", "nota")
-    contenedor.innerHTML= `<div class="tituloNota"><u><b>${notaTitle}</b></u></div><div class="contenidoNota">${notaTexto}`;
-    document.getElementById("notasTotales").appendChild(contenedor);
-}
-function deleteNota(del){
-    this.del=del;
-    listaNotas[(del)-1].posActual= (listaNotas.length-1);
-    listaNotas.splice(del-1,1);
     
+    contenedor = document.createElement('div');
+    contenedor.setAttribute("class", `nota`);
+    contenedor.setAttribute("id", `nota${listaNotas[i].numNota}`);
+    contenedor.innerHTML= `<div class="tituloNota"><u><b>${notaTitle}</b></u><button class="botonDelete" onclick="deleteNota(${listaNotas[i].numNota})">X</button></div><br><div class="contenidoNota">${notaTexto}`;
+    document.getElementById("notasTotales").appendChild(contenedor);
+    i++;
+}
+
+function deleteNota(del){
+    let borrarNota = document.getElementById(`nota${del}`);
+    borrarNota.remove();
+    listaNotas.splice(del, 1);
+    for(let i=0; i<listaNotas.length; i++){
+        if(i>del){
+            listaNotas[i].numNota=listaNotas[i].numNota-1;
+    }
+}
+    
+    i=(listaNotas.length)-1;
+    if(i<0){
+        i=0;
+    }
 }
