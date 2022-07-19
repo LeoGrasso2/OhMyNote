@@ -21,6 +21,18 @@ function cargarNotas(){
     contenedor.innerHTML= `<div class="notaTop"><div class="tituloNota"><b>${listaNotas[i].notaTitle}</b></div><button class="botonDelete" id="botonDelete(${listaNotas[i].numNota})" onclick="deleteNota(${listaNotas[i].numNota})">X</button></div><div class="contenidoNota"><div class="notaTexto">${listaNotas[i].notaTexto}</div><button class="botonEdit" onclick="editarNotaTemp(${listaNotas[i].numNota})">Editar</button>`;
     
     document.getElementById("notasTotales").appendChild(contenedor);
+
+    let divActual = document.getElementById(`nota${listaNotas[i].numNota}`);  
+    const botonBorrar = document.getElementById(`botonDelete(${listaNotas[i].numNota})`);
+
+    botonBorrar.addEventListener('mouseover', () => {
+        divActual.classList.add('vibrate-1');
+    })
+
+    botonBorrar.addEventListener('mouseout', () => {
+        divActual.classList.remove('vibrate-1');
+    }
+    )
     i++;
 }
 
