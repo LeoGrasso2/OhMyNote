@@ -176,3 +176,10 @@ body{
       transform: translate(0);
     }
   }
+
+  @media (max-width:900px) {
+    .vibrate-1 {
+      animation: none;
+    }
+    
+  }
