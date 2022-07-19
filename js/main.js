@@ -83,6 +83,7 @@ function addNota(valorTemp){
 
 function deleteNota(del){
     let borrarNota = document.getElementById(`nota${del}`);
+    borrarNota.classList.remove('vibrate-1');
     borrarNota.classList.add('animate__animated', 'animate__rollOut');
     borrarNota.addEventListener('animationend', () => {
     borrarNota.remove();
@@ -150,6 +151,17 @@ function editarNota(del){
     contenedor.innerHTML= `<div class="notaTop"><div class="tituloNota"><b>${notaTitle}</b></div><button class="botonDelete" id="botonDelete(${listaNotas[del].numNota})" onclick="deleteNota(${listaNotas[del].numNota})">X</button></div><div class="contenidoNota"><div class="notaTexto">${notaTexto}</div><button class="botonEdit" onclick="editarNotaTemp(${listaNotas[del].numNota})">Editar</button>`;
 
     document.getElementById("notasTotales").appendChild(contenedor);
+    let divActual = document.getElementById(`nota${listaNotas[del].numNota}`);
+    const botonBorrar = document.getElementById(`botonDelete(${listaNotas[del].numNota})`);
+
+    botonBorrar.addEventListener('mouseover', () => {
+        divActual.classList.add('vibrate-1');
+    })
+
+    botonBorrar.addEventListener('mouseout', () => {
+        divActual.classList.remove('vibrate-1');
+    }
+    )
 }
 
 // 1. i think it's not okay at all, because everyone has their own privacy and journalist 
