@@ -35,6 +35,11 @@ body{
     justify-content: space-between;
 }
 .botonDelete{
+    color: white;
+    user-select: none;
+    cursor:pointer;
+    width: 25px;
+    height: 25px;
     border: 0px solid transparent;
     border-top-right-radius: 10px;
     background-color: red;
@@ -47,20 +52,18 @@ body{
 
 }
 .tituloNota{
+    font-family: 'Edu NSW ACT Foundation', cursive; 
+    font-size:24px; 
     padding: 10px;
     display: flex;
     max-width: 250px;
     padding-bottom: 5px;
+    text-decoration:underline;
 }
 
-.botonDelete{
-    color: white;
-    user-select: none;
-    cursor:pointer;
-    width: 25px;
-    height: 25px;
-}
  .contenidoNota{
+    font-family: 'Edu NSW ACT Foundation', cursive; 
+    font-size:20px; 
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -70,27 +73,58 @@ body{
     min-width: 100px;
  }
  .inputTitle{
+    height: 10px;
+    resize: none;
     font-family: sans-serif;
     resize:none;
-    width: 200px;
-    background-color: rgba(0, 0, 0, 0.253);
+    width: 150px;
     border: 0px solid transparent;
+    background-color: rgba(0, 0, 0, 0.151);
     border-radius: 10px;
     padding:10px;
+ }
+ .inputTitle::-webkit-scrollbar{
+    width: 0%;
+ }
+ .botones{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    flex-direction: row;
+ }
+
+ .inputEnviar{
+    border: 0px solid black;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
  }
  
  .inputTexto{
     font-family: sans-serif;
     padding:10px;
-    resize:none;
-    width: 200px;
-    height: 250px;
-    background-color: rgba(0, 0, 0, 0.253);
+    background-color: rgba(0, 0, 0, 0.151);
     border: 0px solid transparent;
     border-radius: 10px;
     margin-bottom: 10px;
+    width:150px;
+    resize: none;
+ }
+ .inputTexto::-webkit-scrollbar{
+    width: 0px;
  }
 
+ .cancelBtn{
+    color: white;
+    border: 0px solid black;
+    background-color: rgb(255, 0, 0);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;
+ }
 .botonEdit{
     color: black;
     user-select: none;
@@ -108,7 +142,37 @@ body{
 }
 
 #notasTotales{
-    margin: 10px;
+    padding: 10px;
     display: flex;
+    flex-wrap:wrap;
     flex-direction: row;
 }
+
+/* animaciones */
+
+.animate__animated.animate__rollOut{
+    --animate-duration:.5s;
+}
+.vibrate-1 {
+	animation: vibrate-1 .5s linear infinite both;
+}
+@keyframes vibrate-1 {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
