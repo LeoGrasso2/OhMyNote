@@ -1,10 +1,17 @@
 body{
-    background-color: blueviolet;
+  background-color: rgb(126, 171, 255);
+  opacity: 1;
+  transition-duration: 0.7s;
+  transition-property: opacity;
+}
+
+body.fade {
+  opacity: 0;
 }
 
 .cartelInfo{
     color: white;
-    display: flex;
+    height: 30px;
     font-family: sans-serif;
     max-width: fit-content;
     padding: 10px;
@@ -12,6 +19,49 @@ body{
     border-radius: 10px;
     background-color: rgb(36, 36, 36);
     text-shadow: 2px 1px 1px rgba(109, 109, 109, 0.356);
+}
+
+.toast-close {
+  margin-left: 5px;
+}
+
+#headPage{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.climaTotal{
+  bottom: 0;
+  left:0;
+  margin: 10px;
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+  width: 250px;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 2px 5px 5px rgba(117, 117, 117, 0.37);
+  border-radius: 10px;
+  background-color: rgb(36, 36, 36);
+  text-shadow: 2px 1px 1px rgba(109, 109, 109, 0.356);
+}
+
+#climaIcon{
+  margin-right: 5px;
+}
+
+.tituloClima{
+  display: flex;
+  align-items: center;
+}
+
+.izqHead{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .botonAdd{
@@ -183,3 +233,5 @@ body{
     }
     
   }
+
+  
