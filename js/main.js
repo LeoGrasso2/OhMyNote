@@ -6,9 +6,11 @@ let lat;
 let lon;
 let idiomaUser = navigator.language.slice(0,2);
 
+if(totalNotas){
 totalNotas = JSON.parse(localStorage.getItem('listaNotas'));
 
 totalNotas.forEach(cargarNotas);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     window.setTimeout(function() {
