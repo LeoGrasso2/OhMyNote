@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(126, 171, 255);
+  background-color: rgb(88, 255, 66);
   opacity: 1;
   transition-duration: 0.7s;
   transition-property: opacity;
@@ -12,7 +12,7 @@ body.fade {
 .cartelInfo{
     color: white;
     height: 30px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     max-width: fit-content;
     padding: 10px;
     box-shadow: 2px 5px 5px rgba(117, 117, 117, 0.37);
@@ -39,7 +39,7 @@ body.fade {
   color: white;
   display: flex;
   flex-direction: row;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   width: 250px;
   align-items: center;
   padding: 10px 10px 10px 10px;
@@ -56,6 +56,7 @@ body.fade {
 .tituloClima{
   display: flex;
   align-items: center;
+
 }
 
 .izqHead{
@@ -102,7 +103,7 @@ body.fade {
 
 }
 .tituloNota{
-    font-family: 'Edu NSW ACT Foundation', cursive; 
+    font-family: 'Roboto', sans-serif;
     font-size:24px; 
     padding: 10px;
     display: flex;
@@ -112,7 +113,7 @@ body.fade {
 }
 
  .contenidoNota{
-    font-family: 'Edu NSW ACT Foundation', cursive; 
+    font-family: 'Roboto', sans-serif;
     font-size:20px; 
     display: flex;
     flex-direction: column;
@@ -125,13 +126,17 @@ body.fade {
  .inputTitle{
     height: 10px;
     resize: none;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     resize:none;
     width: 150px;
     border: 0px solid transparent;
-    background-color: rgba(0, 0, 0, 0.151);
-    border-radius: 10px;
+    background-color: transparent;
     padding:10px;
+ }
+ .inputTitle:focus{
+    outline: none !important;
+    border:transparent;
+    border-bottom: 2px solid black;
  }
  .inputTitle::-webkit-scrollbar{
     width: 0%;
@@ -152,14 +157,18 @@ body.fade {
  }
  
  .inputTexto{
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding:10px;
-    background-color: rgba(0, 0, 0, 0.151);
+    background-color: transparent;
     border: 0px solid transparent;
-    border-radius: 10px;
     margin-bottom: 10px;
     width:150px;
     resize: none;
+ }
+ .inputTexto:focus{
+    outline: none !important;
+    border:transparent;
+    border-bottom: 2px solid black;
  }
  .inputTexto::-webkit-scrollbar{
     width: 0px;
@@ -189,6 +198,7 @@ body.fade {
 
 .notaTexto{
     margin: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #notasTotales{
